@@ -4,7 +4,6 @@
  */
 var isPalindrome = function(x) {
     let string = '' + x;
-    console.log(string, typeof(string))
     let left = 0;
     let right = string.length - 1;
     while (left < right) {
