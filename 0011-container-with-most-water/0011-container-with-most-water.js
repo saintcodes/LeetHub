@@ -12,7 +12,7 @@ var maxArea = function(height) {
         let lowest = Math.min(height[left], height[right])
         let length = right-left
         let current = length*lowest
-        console.log(height[left], height[right], length, lowest, current)
+        // console.log(height[left], height[right], length, lowest, current)
         if (current > max) {
             max = current
         }
