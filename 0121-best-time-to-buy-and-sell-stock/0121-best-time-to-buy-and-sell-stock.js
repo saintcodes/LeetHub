@@ -11,6 +11,7 @@ var maxProfit = function(prices) {
         }
         if (prices[i] - lowest > max) {
             max = prices[i] - lowest
+            // console.log(max, prices[i], prices[i+1])
         }
     }
     return max
