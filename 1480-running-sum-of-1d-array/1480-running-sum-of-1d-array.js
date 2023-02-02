@@ -4,9 +4,11 @@
  */
 var runningSum = function(nums) {
     let count = 0
-    for (let i = 0; i < nums.length; i++) {
-        count += nums[i]
-        nums[i] = count
+    let index = 0
+    while (index < nums.length) {
+        count += nums[index]
+        nums[index] = count
+        index++
     }
     return nums
 };
