@@ -13,7 +13,7 @@ var isAnagram = function(s, t) {
         mapS[s[i]] = (mapS[s[i]] ?? 0) + 1
         mapT[t[i]] = (mapT[t[i]] ?? 0) + 1
     }
-    
+    console.log(mapS)
     for (char in mapS) {
         if (mapS[char] !== mapT[char]) return false
     }
