@@ -18,13 +18,20 @@ var canConstruct = function(ransomNote, magazine) {
         map[el] = (map[el] || 0) +1
     }
     
+    // for (letter of ransomNote) {
+    //     if (letter in map) {
+    //         map[letter] -=1
+    //         if (map[letter] < 0) return false
+    //     } else {
+    //         return false
+    //     }
+    // }
+    
     for (letter of ransomNote) {
-        if (letter in map) {
-            map[letter] -=1
-            if (map[letter] < 0) return false
-        } else {
+        if (!(letter in map) || map[letter] === 0) {
             return false
         }
+        map[letter] -=1
     }
     return true
 };
