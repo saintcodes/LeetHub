@@ -4,7 +4,6 @@
  */
 var groupAnagrams = function(strs) {
     let map = new Map
-    let results = []
     
     for (let i = 0; i < strs.length; i++) {
         let sorted = strs[i].split('').sort().join('')
