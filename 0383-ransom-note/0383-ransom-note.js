@@ -21,7 +21,7 @@ var canConstruct = function(ransomNote, magazine) {
     for (letter of ransomNote) {
         if (letter in map) {
             map[letter] -=1
-            if (map[letter]<0) return false
+            if (map[letter] < 0) return false
         } else {
             return false
         }
