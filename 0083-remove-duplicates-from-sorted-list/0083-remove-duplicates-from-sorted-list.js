@@ -13,7 +13,7 @@
 // c    
 // 1 --> 1 --> 2
 var deleteDuplicates = function(head) {
-    if (!head) return head
+    if (head === null) return head
     
     let current = head
     while (current != null && current.next != null) {
