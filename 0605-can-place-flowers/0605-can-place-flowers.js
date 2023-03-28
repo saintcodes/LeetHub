@@ -4,7 +4,6 @@
  * @return {boolean}
  */
 var canPlaceFlowers = function(flowerbed, n) {  
-  let counter = n
   for (let i =0; i <flowerbed.length && n !==0; i++) {
       if (flowerbed[i] === 0 &&
           flowerbed[i-1] !== 1 &&
@@ -12,6 +11,7 @@ var canPlaceFlowers = function(flowerbed, n) {
           n--
           i++
       }
+      console.log(i, n)
   }
     return n===0
 };
