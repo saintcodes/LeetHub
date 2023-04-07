@@ -16,5 +16,5 @@ var getRow = function(rowIndex) {
             }
         }
     }
-    return result[result.length-1]
+    return result[rowIndex]
 };
