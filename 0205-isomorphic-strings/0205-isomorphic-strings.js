@@ -6,7 +6,7 @@
 var isIsomorphic = function(s, t) {
     let dict = {}
     
-    for (let i=0;i <s.length; i++) {
+    for (let i=0; i<s.length; i++) {
         if (s[i] in dict) {
             if (dict[s[i]] !== t[i]) return false
         } else {
