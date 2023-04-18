@@ -15,10 +15,10 @@ var rotate = function(nums, k) {
     // if (k > nums.length) k = k%nums.length
     // nums.unshift(...nums.splice(nums.length-k, nums.length-1))
     
-    const len = nums.length
-    k = (k % len)
+    // const len = nums.length
+    k = (k % nums.length)
     
-    let end = nums.splice(len - k)
+    // let end = nums.splice(len - k)
 
-    nums.splice(0,0,...end)
+    nums.splice(0,0,...nums.splice(nums.length-k))
 };
