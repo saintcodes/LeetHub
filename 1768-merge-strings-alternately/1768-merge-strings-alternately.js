@@ -4,7 +4,7 @@
  * @return {string}
  */
 var mergeAlternately = function(word1, word2) {
-    let merged = []
+    let merged = ""
     let m = word1.length, n = word2.length
     let i = 0
     let j = 0
