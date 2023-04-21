@@ -2,15 +2,15 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+// [2,2,3,2]
+// res
+//    i
+
 var singleNumber = function(nums) {
-    
-    let map = {}
-    for (num of nums) {
-        map[num] = (map[num] || 0) +1
-    }
-    for (el in map) {
-        if (map[el] === 1) {
-            return el
+    for (const i of nums) {
+        if (nums.filter(x => x === i).length == 1) {
+            return i;
         }
     }
-};
+}
