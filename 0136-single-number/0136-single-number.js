@@ -9,7 +9,7 @@ var singleNumber = function(nums) {
     }
     for (el in map) {
         if (map[el] === 1) {
-            return Number(el)
+            return parseInt(el)
         }
     }
 };
