@@ -16,15 +16,17 @@ var kidsWithCandies = function(candies, extraCandies) {
     //     candies[kid]-= extraCandies
     // }
     // return result  
-    let possibilities = new Array(candies.length).fill(false);
+//     let possibilities = new Array(candies.length).fill(false);
 
-    const currentMax = Math.max(...candies);
+//     const currentMax = Math.max(...candies);
 
-    candies.forEach((currentCandies, index) => {
-        if(currentCandies+extraCandies >= currentMax) {
-            possibilities[index] = true;
-        }
-    })
+//     candies.forEach((currentCandies, index) => {
+//         if(currentCandies+extraCandies >= currentMax) {
+//             possibilities[index] = true;
+//         }
+//     })
 
-    return possibilities;
+//     return possibilities;
+    let max = Math.max(...candies);
+    return candies.map(item => item + extraCandies >= max);
 };
