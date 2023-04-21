@@ -13,7 +13,6 @@ var increasingTriplet = function(nums) {
             one = nums[i]
         } else if (nums[i] <= two) {
             two = nums[i]
-            console.log(one, two, nums[i])
         } else {
             return true
         }
