@@ -6,8 +6,12 @@ var validPalindrome = function(s) {
     let left = 0;
     let right = s.length - 1;
     
+//         left    right  
+//   a      b       c       a
+
     while (left < right) {
-        if (s.charAt(left) != s.charAt(right)) {
+        if (s[left] != s[right]) {
+            console.log(s[left+1], s[right])
             return isValid(left + 1, right) || isValid(left, right - 1);
         }
         left++;
@@ -15,7 +19,6 @@ var validPalindrome = function(s) {
     }
     
     return true;
-    
     
     function isValid(left, right) {
         while (left < right) {
@@ -28,28 +31,4 @@ var validPalindrome = function(s) {
         
         return true;
     }
-};
-    
-    
-//     for (let [left, right]=[0, s.length-1]; left < right;) {
-//         if (s[left] !== s[right]) {
-//             let og = s
-//             for (let i=0; i<s.length; i++) {
-//                 let mutated = og.replace(og[i], '')
-//                 console.log(og, og[i], mutated)
-//                 for (let [left, right]=[0,mutated.length-1]; left<right;) {
-//                     if (mutated[left] === mutated[right]) {
-//                         return true
-//                     }
-//                     left++
-//                     right--
-//                 }
-//             s = og
-//             // i++
-//             }
-//         }
-//         left++, right--
-//         // s=og
-//     }
-//     return false
-// }
+}
