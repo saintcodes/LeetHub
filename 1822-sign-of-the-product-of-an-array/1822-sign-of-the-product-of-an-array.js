@@ -4,7 +4,7 @@
  */
 var arraySign = function(nums) {
     
-    if (nums.includes(0)) return 0
+    // if (nums.includes(0)) return 0
     
     let product = nums.reduce((a,b) => a*b)
     // let product = 1
@@ -15,7 +15,7 @@ var arraySign = function(nums) {
     function signFunc(num) {
         if (num > 0) return 1
         if (num < 0) return -1
-        if (num === 0) return 0
+        else return 0
     }
     
     return signFunc(product)
