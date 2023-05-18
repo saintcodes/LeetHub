@@ -4,19 +4,18 @@
  */
 var longestCommonPrefix = function(strs) {
     if (!strs.length) return ""
-    let sorted = strs.sort((a,b) => a.length-b.length)
-    let first = sorted[0]
+    // strs.sort((a,b) => a.length-b.length)
+    let first = strs[0]
     let prefix = ''
    
     for (let char of first) {
         prefix+=char
-        for (let i=1; i<sorted.length; i++) {
-            if (!sorted[i].startsWith(prefix)) {
+        for (let i=1; i<strs.length; i++) {
+            if (!strs[i].startsWith(prefix)) {
                 prefix = prefix.slice(0, prefix.length-1)
                 return prefix
             }
         }
     }
-                  return prefix
-
+    return prefix
 };
