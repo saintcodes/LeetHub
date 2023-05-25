@@ -5,10 +5,9 @@
  */
 var topKFrequent = function(nums, k) {
 
-    let freq = new Map()
-    
     if (nums.length === 1) return nums
-    
+
+    let freq = new Object()
     for (let i = 0; i < nums.length; i ++) {
         freq[nums[i]] = (freq[nums[i]] || 0) +1
     }
@@ -19,10 +18,9 @@ var topKFrequent = function(nums, k) {
         arr.push([key, value])
     }
     
-    // console.log(arr)
     arr.sort((a, b) => b[1] - a[1])
     let res = []
-    // res.push(arr[arr.length-1][1], arr[arr.length-2][1])
+    console.log(arr)
 
     for (let i=0; i < k; i++) {
         res.push(arr[i][0])
