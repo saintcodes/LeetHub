@@ -7,9 +7,9 @@ var replaceWords = function(dictionary, sentence) {
     let split = sentence.split(' ')
 
     for (let i=0;i <split.length; i++) {
-        for(let root of dictionary) {
+        dictionary.forEach((root) => {
             if (split[i].startsWith(root)) split[i] = root
-        }
+        })
     }
     
     return split.join(' ')
