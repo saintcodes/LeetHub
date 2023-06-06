@@ -11,10 +11,8 @@ var reformatDate = function(date) {
     let dd = date.split(' ')[0]
     let ddSliced = dd.slice(0, dd.length-2)
  
-    console.log(typeof mm, ddSliced)
     if (mm < 10) mm = "0" + mm
     if (ddSliced < 10) ddSliced = "0" + ddSliced
-    console.log(mm, ddSliced)
     
     return yyyy+"-"+mm+"-"+ddSliced
 };
