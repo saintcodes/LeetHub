@@ -3,7 +3,7 @@
  * @return {number}
  */
 var equalPairs = function(grid) {
-    let rows = grid
+    // let rows = grid
     let columns = []
 
     for (let c = 0; c < grid[0].length; c++) {
@@ -13,11 +13,15 @@ var equalPairs = function(grid) {
         }
         columns.push(column)
     }
+    
     let same = 0
+    
     for (let i = 0; i < columns.length; i++) {
-        for (let j = 0; j <rows.length; j++) {
-            if (rows[j] + "" === columns[i] + "") same++
+        for (let j = 0; j <grid.length; j++) {
+            if (grid[j] + "" === columns[i] + "") same++
         }
     }
+    
     return same
+
 };
