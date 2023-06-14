@@ -21,13 +21,11 @@ var summaryRanges = function(nums) {
         
         else if (nums[end+1] !== nums[i]+1) {
             end = nums[i]
-            console.log(nums[start], end)
             if (nums[start] === end) {
                 res.push(`${nums[start]}`)
             } else {
                 res.push(`${nums[start]}->${end}`)
             }
-            // console.log(nums[start], end, nums[end])
             start = i+1
             end = start
         }
