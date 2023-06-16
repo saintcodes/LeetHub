@@ -22,7 +22,5 @@ var lemonadeChange = function(bills) {
             return false
         }
     }
-    console.log(drawer)
-
     return true
 };
