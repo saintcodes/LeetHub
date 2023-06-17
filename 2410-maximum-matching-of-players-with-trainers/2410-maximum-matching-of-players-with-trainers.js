@@ -11,16 +11,12 @@ var matchPlayersAndTrainers = function(players, trainers) {
     let i = players.length-1
     let j = trainers.length-1
     
-    console.log(j,i)
-    console.log(players)
     while (j >= 0 || i >= 0) {
         if (players[i] <= trainers[j]) {
-            console.log(players[i], trainers[j], 'p < t, count+1', i, j)
             count++
             i--
             j--
         } else if (players[i] > trainers[j]) {
-            console.log(players[i], trainers[j], 'p > t', 'no count add', i, j)
             i--
         } else break
     }
