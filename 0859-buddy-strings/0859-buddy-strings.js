@@ -14,7 +14,6 @@ var buddyStrings = function(s, goal) {
     for (let i=0; i<s.length; i++) {
         if (s[i] !== goal[i]) diff.push(i)
     }
-    console.log(diff)
     
     //if diff array length > 0, reassign and check if temp === goal
     if (diff.length>0) {
@@ -24,11 +23,13 @@ var buddyStrings = function(s, goal) {
         if (temp.join('') === goal) return true
     }
     
+    //if strings are equal, create a map and update counter
     if (s === goal) {
         let sMap = new Map()
         for (let i =0; i<s.length; i++) {
             sMap[s[i]] = (sMap[s[i]] || 0) +1
         }
+        //checks if there's only 1 key in the map, if so, return true ie., 'aaa' === 'aaa'
         if (Object.keys(sMap).length == 1) {
             return true
         } else {
