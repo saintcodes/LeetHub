@@ -12,7 +12,6 @@ var moveZeroes = function(nums) {
             zeroes++
         }
     }
-    console.log(zeroes, nums)
     
     while (zeroes > 0) {
         nums.push(0)
