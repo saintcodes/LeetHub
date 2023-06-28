@@ -14,7 +14,7 @@ var findTheDifference = function(s, t) {
         return arr.filter(x => x === item).length;
     };
     
-    for (let c of tArr) {
+    for (let c of tEl) {
         if ((getFrequency(sArr, c) != getFrequency(tArr, c))) return c;
     }
     
