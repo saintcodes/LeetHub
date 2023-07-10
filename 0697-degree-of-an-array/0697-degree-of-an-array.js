@@ -20,7 +20,7 @@ var findShortestSubArray = function(nums) {
     for (let i=0; i< checks.length; i++) {
         let first = nums.indexOf(checks[i])
         let last = nums.lastIndexOf(checks[i])
-        possibles.push((last-first)+1)
+        console.log(possibles.push((last-first)+1))
 
     }    
     return Math.min(...possibles)
