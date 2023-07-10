@@ -3,10 +3,6 @@
  * @return {number}
  */
 var distributeCandies = function(candyType) {
-    let map = new Map()
-    for (let i = 0; i < candyType.length; i++) {
-        if (!map[candyType[i]]) map.set(candyType[i])
-        else map[candyType[i]]
-    }
-    return Math.min(map.size, candyType.length/2)
+    let set = new Set(candyType)
+    return Math.min(set.size, candyType.length/2)
 };
