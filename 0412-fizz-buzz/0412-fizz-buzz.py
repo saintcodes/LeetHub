@@ -1,16 +1,17 @@
-/**
- * @param {number} n
- * @return {string[]}
- */
-var fizzBuzz = function(n) {
-    let arr = []
-    let i = 1
-    while (i <= n) {
-        if (i % 3 === 0 && i % 5 === 0) arr.push('FizzBuzz')
-        else if (i % 3 === 0) arr.push('Fizz')
-        else if (i % 5 === 0) arr.push('Buzz')
-        else arr.push(i.toString())
-        i++
-    }        
-    return arr
-};
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        i = 1
+        arr = []
+        while i in range(n+1):
+            if i % 3 == 0 and i % 5 == 0:
+                arr.append("FizzBuzz")
+            elif i % 3 == 0:
+                arr.append("Fizz")
+            elif i % 5 == 0:
+                arr.append('Buzz')
+            else:
+                arr.append(str(i))
+            i+=1
+        return arr
+    
+    
