@@ -6,13 +6,10 @@ var findDisappearedNumbers = function(nums) {
     let start = 1
     let res = []
     for (let i=0; i<nums.length; i++) {
-        if (nums.includes(start)) {
-            start++
-            continue
-        } else {
+        if (!nums.includes(start)) {
             res.push(start)
-            start++
         }
+        start++
     }
     return res
 };
