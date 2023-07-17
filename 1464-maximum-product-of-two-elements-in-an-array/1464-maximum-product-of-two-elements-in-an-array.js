@@ -4,7 +4,5 @@
  */
 var maxProduct = function(nums) {
     nums.sort((a,b) => a-b)
-    let max = nums[nums.length-1]
-    let secondMax = nums[nums.length-2]
-    return (max-1)*(secondMax-1)
+    return (nums[nums.length-1]-1)*(nums[nums.length-2]-1)
 };
