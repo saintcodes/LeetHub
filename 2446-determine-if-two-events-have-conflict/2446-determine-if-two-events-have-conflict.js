@@ -7,6 +7,6 @@ var haveConflict = function(event1, event2) {
     const [start1, end1] = event1
     const [start2, end2] = event2
     
-    if (end1 >= start2 && start1 <= end2 || end2 >= start1 && start2 <= end1) return true
-    return false
+    return end1 >= start2 && start1 <= end2 || end2 >= start1 && start2 <= end1
+    
 };
