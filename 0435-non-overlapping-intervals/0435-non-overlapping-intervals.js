@@ -8,9 +8,9 @@ var eraseOverlapIntervals = function(intervals) {
     let remove = 0
     let lastCompared = -Infinity
     for (let i = 0; i<intervals.length; i++) {
-        const [x, y] = intervals[i]
+        // const [x, y] = intervals[i]
         
-        if (x >= lastCompared) lastCompared = y
+        if (intervals[i][0] >= lastCompared) lastCompared = intervals[i][1]
         else remove++
     }
     return remove
