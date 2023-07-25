@@ -7,13 +7,12 @@ var peakIndexInMountainArray = function(arr) {
     //     if (arr[i] > arr[i+1]) return i
     // }
     
-    let l = 1, r = arr.length-1
+    let l = 1, r = arr.length-2
     let mid
     while (l < r) {
         mid = Math.floor((l+r)/2)
         if (arr[mid] < arr[mid+1]) l = mid+1
         else r = mid
     }
-    
     return l
 };
