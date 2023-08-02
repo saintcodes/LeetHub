@@ -5,7 +5,7 @@
  */
 var minimumSize = function(nums, maxOperations) {
     //let total = nums.reduce((c, a) => c+=a)
-    let left = 1, right = 10**9
+    let left = 1, right = Math.max(...nums)
 
     
     while (left < right) {
