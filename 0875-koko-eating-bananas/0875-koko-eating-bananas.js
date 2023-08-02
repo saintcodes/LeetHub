@@ -7,7 +7,7 @@ var minEatingSpeed = function(piles, h) {
     let n = piles.length
     let totalB = piles.reduce((c, a) => c+=a)
     // let left = 1, right = Math.max(...piles)
-    let left = Math.floor(totalB/h), right = totalB
+    let left = Math.floor(totalB/h), right = Math.max(...piles)
     //Input: piles = [3,6,7,11], h = 8
     //Output: 4
     
