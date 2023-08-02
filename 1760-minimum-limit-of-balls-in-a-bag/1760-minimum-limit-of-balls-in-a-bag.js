@@ -4,8 +4,8 @@
  * @return {number}
  */
 var minimumSize = function(nums, maxOperations) {
-    //let total = nums.reduce((c, a) => c+=a)
-    let left = 1, right = Math.max(...nums)
+    let total = nums.reduce((c, a) => c+=a)
+    let left = 1, right = Math.floor(total/maxOperations)
 
     
     while (left < right) {
