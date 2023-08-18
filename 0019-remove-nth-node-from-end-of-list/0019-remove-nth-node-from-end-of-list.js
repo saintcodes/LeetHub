@@ -24,7 +24,7 @@ var removeNthFromEnd = function(head, n) {
     while (count > n) {
         if (count == n+1) curr.next = curr.next.next
         curr = curr.next
-        if (curr == null) break
+        // if (curr == null) break
         count--
     }
     return res
