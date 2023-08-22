@@ -11,27 +11,14 @@ var convertToTitle = function(columnNumber) {
     }
     
     let columnName = []
-//     let first = Math.floor(columnNumber/26)
-//     let remainder = columnNumber % 26
-    
-//     let res = [alphabet[first], alphabet[remainder]]
-//     let total = res.join('')
-//     return total
     
     while(columnNumber > 0) {
         let rem = columnNumber % 26 === 0 ? 26 : columnNumber % 26
         columnName.push(alphabet[rem])
         columnNumber = (columnNumber - rem)/26
+        console.log(rem, columnNumber)
     }
-    return columnName.reverse().join('')
     
-  //    let columnName = [];
-  // while(columnNumber > 0){
-  //   //remainder will be between 1 and 26
-  //   let rem = columnNumber%26 === 0 ? 26 : columnNumber%26;
-  //   //build column name in reverse
-  //   columnName.push(dict[rem]);
-  //   columnNumber = (columnNumber-rem)/26
-  // }
-  // return
+    return columnName.reverse().join('')
+
 };
