@@ -10,8 +10,6 @@ var dominantIndex = function(nums) {
     
     nums.sort((a,b) => a-b)
     
-    let max = nums[nums.length-1]
-    let second = nums[nums.length-2]
-    if (max >= second*2) return map[max]
+    if (nums[nums.length-1] >= (nums[nums.length-2])*2) return map[nums[nums.length-1]]
     return -1
 };
