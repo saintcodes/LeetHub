@@ -6,7 +6,7 @@ var minCostClimbingStairs = function(cost) {
     let res = 0
     
     for (let i=2; i<cost.length; i++) {
-        console.log(i, cost[i])
+        // console.log(i, cost[i])
         cost[i] = cost[i] + Math.min(cost[i-2], cost[i-1])
     }
     let first=cost.pop()
