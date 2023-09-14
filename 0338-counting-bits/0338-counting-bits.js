@@ -14,8 +14,7 @@ var countBits = function(n) {
         for (digit of binary) {
             if (digit == '1') count++
         }
-        
-        ans.push(count)
+        ans[i] = count
     }
     return ans
 };
