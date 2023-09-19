@@ -9,11 +9,8 @@ var kWeakestRows = function(mat, k) {
         if (mat[idx].indexOf(0) == -1) {
             map.push([idx, mat[idx].length])
         } else map.push([idx, mat[idx].indexOf(0)])
-
     }
-    console.log(map)
     map.sort((a,b) => a[1] - b[1])
-    console.log(map)
     let idx = 0
     while (k != 0) {
         res.push(map[idx][0])
