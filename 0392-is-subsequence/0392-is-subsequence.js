@@ -6,12 +6,12 @@
 var isSubsequence = function(s, t) {
     if (s.length === 0 && t.length === 0) return true
     if (s.length > t.length) return false
-    
-    let ind = 0;
+
+    let index = 0;
       for (let i = 0; i < t.length; i++) {
-        if (s[ind] === t[i]) {
-          ind++;
+        if (s[index] === t[i]) {
+          index++;
         }
       }
-      return ind === s.length    
+      return index === s.length    
 };
