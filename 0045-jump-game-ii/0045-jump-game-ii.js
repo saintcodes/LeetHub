@@ -3,18 +3,22 @@
  * @return {number}
  */
 var jump = function(nums) {
-    let l = 0, r = 0, jumps = 0;
+    let currBeg = 0, currEnd = 0, jumps = 0;
     
-    while(r < nums.length-1){
+    while(currEnd < nums.length-1){
         let maxReach = 0;
-        for(let i=l; i<r+1; i++){
-            console.log('nums[i]:', nums[i], 'i:', i, nums[i]+i)
+        for(let i=currBeg; i<currEnd+1; i++){
+            console.log('nums[i]:', nums[i])
+            console.log(`i=${i}`, 'nums[i]+i:', nums[i]+i)
             maxReach = Math.max(maxReach, nums[i]+i);
             console.log('maxReach:', maxReach)
         }
-        l = r+1;
-        r = maxReach;
+        currBeg = currEnd+1;
+        currEnd = maxReach;
+        console.log(currBeg, currEnd)
         jumps++;
+        if (currEnd > nums.length-1) return jumps
+
     }
     return jumps;
 };
