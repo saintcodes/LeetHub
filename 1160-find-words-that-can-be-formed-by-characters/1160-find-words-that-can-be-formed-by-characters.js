@@ -9,18 +9,13 @@ var countCharacters = function(words, chars) {
     for (let char of chars) map[char] = (map[char] || 0) +1    
 
     words.forEach((word) => {
-        let wordMap = {}
+        let wordMap = {}, pass = true
         for (let char of word) wordMap[char] = (wordMap[char] || 0) +1
-        let pass = true
         for (let key in wordMap) {
             if (!(key in map) || wordMap[key] > map[key]) {
                 pass = false
                 break
             }
-            // else if (wordMap[key] <= map[key]) {
-            //     console.log(word, word.length)
-            //     sum+=word.length
-            // }
         }
         if (pass) sum+=word.length
     })
