@@ -15,7 +15,9 @@ var sumOfUnique = function(nums) {
     
 //     return sum
     
-   return nums.filter((el, index, arr) => arr.indexOf(el) === arr.lastIndexOf(el)).reduce((a, b) => a + b, 0)
-
+   return nums.filter((el, index, arr) => 
+       arr.indexOf(el) === arr.lastIndexOf(el))
+           .reduce((a, b) => a + b, 0)
+   
 };
 
