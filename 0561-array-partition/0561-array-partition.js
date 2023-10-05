@@ -3,13 +3,11 @@
  * @return {number}
  */
 var arrayPairSum = function(nums) {
-  let max = -Infinity, arrs = [], sum = 0
+  let arrs = [], sum = 0
   nums.sort((a,b) => a-b)
-  for (let i=0, j=1; j<nums.length; i+=2, j+=2) {
-      arrs.push([nums[i], nums[j]])
+    
+  for (let i=0; i<nums.length; i+=2) {
+      sum+=nums[i]
   }
-    for (let arr of arrs) {
-        sum += Math.min(...arr)
-    }
     return sum
 };
