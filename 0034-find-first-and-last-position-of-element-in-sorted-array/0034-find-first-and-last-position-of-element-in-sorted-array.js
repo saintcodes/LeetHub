@@ -13,9 +13,7 @@ var searchRange = function(nums, target) {
     while (left <= right) {
         let mid = Math.floor(left + (right-left)/2)
         if (nums[mid] === target) {
-            console.log(nums[mid])
            start = end = mid
-            console.log(start, end)
             while (start > 0 && nums[start-1] === target) start--
             while (end < nums.length && nums[end+1] === target) end++
             break
