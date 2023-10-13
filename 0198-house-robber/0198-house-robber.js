@@ -19,5 +19,15 @@ var rob = function(nums) {
   
     
 //     return Math.max(op1, op2)
-    return nums.reduce((acc, cur) => [acc[1], Math.max(acc[1], acc[0] + cur)], [0, 0])[1]
+    // return nums.reduce((acc, cur) => [acc[1], Math.max(acc[1], acc[0] + cur)], [0, 0])[1]
+   let robEven = 0 ,robOdd = 0;
+    for(let i = 0 ; i < nums.length ; i++){
+        if(i % 2 === 0){
+            robEven = Math.max(robEven + nums[i] ,robOdd);
+        }else{
+            robOdd = Math.max(robOdd + nums[i] ,robEven);
+        }
+    }
+    
+    return Math.max(robOdd ,robEven);
 };
