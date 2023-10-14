@@ -4,10 +4,14 @@
  * @return {number}
  */
 var numJewelsInStones = function(jewels, stones) {
-    let count = 0
+    let count = 0, map = {}
     let jewel = Array.from(jewels)
     for (let char of stones) {
-        if (jewel.includes(char)) count++
+        map[char] = (map[char] || 0) +1
+    }
+    // console.log(map)
+    for (let key in map) {
+        if (jewel.includes(key)) count+=map[key]
     }
     return count
 };
