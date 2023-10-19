@@ -6,6 +6,7 @@
 var backspaceCompare = function(s, t) {
     return reduce(s) === reduce(t);
 }
+
     const reduce = (str) => {
         if (str === null) return '';
         for (let i = 0; i < str.length; i++) {
@@ -21,3 +22,10 @@ var backspaceCompare = function(s, t) {
         }
     return str;
 };
+
+
+//  0 1 2 3 4 5 6
+//  a b # d # c
+//      i
+
+//returns str.slice(0 (from a to b, not inclusive), 1) === just "a" + str.slice(3) === just 'd'
