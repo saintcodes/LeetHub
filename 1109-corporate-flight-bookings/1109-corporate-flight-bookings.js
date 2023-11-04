@@ -5,6 +5,8 @@
  */
 var corpFlightBookings = function(bookings, n) {
     let arr = new Array(n).fill(0)
+    
+
     for (let i=0; i<bookings.length; i++) {
         
         let curr = bookings[i][0]-1
